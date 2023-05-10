@@ -32,3 +32,17 @@ describe('Clicking "Pusha till stacken"', () => {
 		await alert.accept();
 	});
 });
+
+test('pop to make stack empty, empty stack should return undefined ', async () => {
+    let pop = await driver.findElement(By.id('pop'));
+    await pop.click();
+    let alert = await driver.switchTo().alert();
+    await alert.accept();
+
+    let peek = await driver.findElement(By.id('peek'));
+    await peek.click();
+    let stack = await driver.findElement(By.id('top_of_stack')).getText();
+    expect(stack).toEqual("undefined");
+    
+    
+})
