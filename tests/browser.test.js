@@ -42,7 +42,7 @@ test('pop to make stack empty, empty stack should return undefined ', async () =
     let peek = await driver.findElement(By.id('peek'));
     await peek.click();
     let stack = await driver.findElement(By.id('top_of_stack')).getText();
-    expect(stack).toEqual("undefined");
+    expect(stack).toEqual("undeined");
     
     
 })
