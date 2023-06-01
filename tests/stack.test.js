@@ -22,8 +22,5 @@ test('pop on empty stack should return undefined', ()=> {
     stack.pop();
     stack.pop();
     stack.pop();
-    stack.pop();
     expect(stack.pop()).toBeUndefined();
-    
-
 });
